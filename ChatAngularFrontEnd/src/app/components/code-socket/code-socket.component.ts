@@ -39,6 +39,7 @@ export class CodeSocketComponent implements OnInit {
   sendMessageUsingSocket() {
     if (this.form.valid) {
       let message: Message = { message: this.form.value.message, fromId: this.userForm.value.fromId, toId: this.userForm.value.toId };
+      //console.log(message);
       this.stompClient.send("/socket-subscriber/send/message", {}, JSON.stringify(message));
     }
   }
@@ -46,7 +47,11 @@ export class CodeSocketComponent implements OnInit {
   sendMessageUsingRest() {
     if (this.form.valid) {
       let message: Message = { message: this.form.value.message, fromId: this.userForm.value.fromId, toId: this.userForm.value.toId };
-      this.socketService.post(message).subscribe(res => {
+      //console.log(message);
+      // this.socketService.post(message).subscribe(res => {
+      //   console.log(res);
+      // })
+      this.socketService.createMessage(message).subscribe(res => {
         console.log(res);
       })
     }
