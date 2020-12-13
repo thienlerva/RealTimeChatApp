@@ -9,6 +9,8 @@ To run angular:
 2. npm install
 3. ng serve
 
+To run springboot:
+nvm spring-boot:run
 
 Set up new angular app:
 1. g new socket-angular --routing
