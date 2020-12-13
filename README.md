@@ -2,6 +2,8 @@ RealTime Chat App with Toastr Push Notification
 
 https://www.yamicode.com/snippets/real-time-chat-angular-spring-boot-java-websocket-stompjs
 
+https://www.javaguides.net/2019/06/spring-boot-angular-8-websocket-example-tutorial.html
+
 To run angular:
 1. cd directory
 2. npm install
